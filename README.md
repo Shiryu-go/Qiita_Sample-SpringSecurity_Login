@@ -1,0 +1,2 @@
+# SpringSecuritySample
+未来の私のためのSpringSecurityのサンプルです
