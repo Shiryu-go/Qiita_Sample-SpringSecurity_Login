@@ -1,4 +1,4 @@
-package spring.security.in_memory;
+package spring.security.sample;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
