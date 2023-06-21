@@ -22,7 +22,7 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
         this.authenticationManager = authenticationManager;
 
         // "/api/login" の場合に認証を行うよう設定
-        setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/api/login", "POST"));
+        setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/login", "POST"));
     }
 
     @Override
@@ -45,6 +45,9 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
 		setDetails(request, authRequest);
         System.out.println("ちゃんとFilter動いてるで");
 		return this.getAuthenticationManager().authenticate(authRequest);
-	    
     }
+    @Override
+    	protected AuthenticationManager getAuthenticationManager() {
+		return this.authenticationManager;
+	}
 }
