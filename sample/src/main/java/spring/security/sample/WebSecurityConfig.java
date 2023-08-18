@@ -25,8 +25,8 @@ public class WebSecurityConfig {
         .authorizeHttpRequests((requests) -> requests
           .requestMatchers("/csrf").permitAll()
                 )
-				.addFilter(new MyUsernamePasswordAuthenticationFilter(A))
-
+				//.addFilter(new MyUsernamePasswordAuthenticationFilter(A))
+				formL
 				.logout((logout) -> logout.permitAll());
 				
 		return http.build();
